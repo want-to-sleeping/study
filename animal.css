@@ -1,0 +1,593 @@
+*{
+    margin:0;
+    padding:0;
+}
+.detail{
+    height:30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.column{
+    width: 20px;
+    height: 15px;
+    margin-left: 20px;
+    background: url(./images/三杠.png) no-repeat;
+    transition: transform 0.5s;
+}
+.column:hover{
+    transform: scale(0.3,0.3);
+}
+.search{
+    width: 20px;
+    height: 15px;
+    margin-right: 20px;
+    background: url(./images/放大镜.png) no-repeat;
+}
+.animal{
+    height: 900px;
+    background: url(./images/animal1.png) no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.camera{
+    display: flex;
+    justify-content: center;
+    flex-basis: 250px;
+    transition:transform 0.5s ease-in-out;
+}
+.camera p{
+    width:200px;
+    height:200px;
+    background: #81c04b url(./images/camera.png) no-repeat center;
+}
+.camera:hover{
+    transform: scale(0.8,0.8);
+}
+.little1{
+    height:50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 100px;
+}
+.little1 p{
+    font-size: 72px;
+    font-family: "Cambria";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+}
+.little2{ 
+    width:800px;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.little2 p{
+    font-size: 30px;
+    flex-basis: 250px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.25;
+}
+.part{
+    width:170px;
+    height:70px;
+    background-color: #2a3f17;
+    display: flex;
+    align-items: center;  
+    text-align: center;
+}
+.part p{
+    font-size: 25px;
+    color:white;
+}
+.birds{
+    height:600px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bird1{
+    margin-right: 50px;
+    width: 333px;
+    height: 500px;
+    background: url(./images/火烈鸟1.png) no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    transition: transform 0.5s ease-in-out;
+}
+.bird1:hover{
+    transform: translateY(-50px);
+}
+.bird1 p{
+    color: white;
+    font-size: 48px;
+    margin-bottom: 100px;
+    margin-right: 30px;
+}
+.bird2{
+    margin-right: 50px;
+    width: 333px;
+    height: 500px;
+    background: url(./images/火烈鸟2.png) no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    transition: transform 0.5s ease-in-out;
+}
+.bird2 p{
+    color: white;
+    font-size: 48px;
+    margin-bottom: 100px;
+    margin-right: 30px;
+}
+.bird2:hover{
+    transform: translateY(-50px);
+}
+.bird3{
+    margin-right: 50px;
+    width: 333px;
+    height: 500px;
+    background: url(./images/火烈鸟3.png) no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    transition: transform 0.5s ease-in-out;
+}
+.bird3 p{
+    color: white;
+    font-size: 48px;
+    margin-bottom: 100px;
+    margin-right: 30px;
+} 
+.bird3:hover{
+    transform: translateY(-50px);
+}
+.deer{
+    height:570px;
+    background: url(./images/鹿.png) no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.grey{
+    width:800px;
+    height:500px;
+    background: #e0dfdf;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}  
+.grey:hover{
+    transform: translateY(-30px);
+}
+.words{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 1.5;
+    margin-top: 50px;
+}
+.sign{
+    width:170px;
+    height:70px;
+    background-color: #2a3f17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+.sign p{
+    font-size: 30px;
+    color:white;
+}
+.sign:hover{
+    transform: scale(0.8,0.8);
+}
+.compare{
+    height:600px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.title{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width:350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: border 3s ease-in-out;
+    animation-delay: 5s;
+}
+@keyframes border{
+    0%{
+        border: none;
+    }
+    25%{
+        border-top: #2a3f17 solid 2px;
+    }
+    50%{
+        border-top: #2a3f17 solid 2px;
+        border-right: #2a3f17 solid 2px;
+        }
+    75%{
+        border-top: #2a3f17 solid 2px;
+        border-right: #2a3f17 solid 2px;
+        border-bottom: #2a3f17 solid 2px;
+    }
+    100%{
+        border-top: #2a3f17 solid 2px;
+        border-right: #2a3f17 solid 2px;
+        border-bottom: #2a3f17 solid 2px;
+        border-left: #2a3f17 solid 2px;
+    }
+}
+.title p{
+    font-size: 48px;
+    color:#2a3f17;
+    font-family: "Microsoft YaHei";
+}
+.animals{
+    display: flex;
+    flex-direction: row;
+}
+.animal1{
+    width:260px;
+    height:400px;
+    background: #e0dfdf url(./images/马.png) no-repeat;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.animal1:hover{
+    transform: translateY(-50px);
+}
+.animal1 p{
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+}
+.name1{
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.indetail1{
+    height:15px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    border-bottom: #2a3f17 solid 2px;
+}      
+.animal2{
+    width:260px;
+    height:400px;
+    background: #e0dfdf url(./images/袋鼠.png) no-repeat;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.animal2:hover{
+    transform: translateY(-50px);
+}
+.animal2 p{
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+}
+.name2{
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.indetail2{
+    height:15px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    border-bottom: #2a3f17 solid 2px;
+}   
+.animal3{
+    width:260px;
+    height:400px;
+    background: #e0dfdf url(./images/狮子.png) no-repeat;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.animal3:hover{
+    transform: translateY(-50px);
+}
+.animal3 p{
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+}
+.name3{
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.indetail3{
+    height:15px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    border-bottom: #2a3f17 solid 2px;
+}   
+.animal4{
+    width:260px;
+    height:400px;
+    background: #e0dfdf url(./images/小鸟.png) no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.animal4:hover{
+    transform: translateY(-50px);
+}
+.animal4 p{
+    font-family: "Microsoft YaHei";
+    color: rgb(42, 63, 23);
+    line-height: 0;
+}
+.name4{
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.indetail4{
+    height:15px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    border-bottom: #2a3f17 solid 2px;
+} 
+.example{
+    height:1300px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    height: 70px;
+    width:170px;
+    border: #2a3f17 solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+.header:hover{
+    background-color: #2a3f17;
+}
+.header p{
+    font-size: 22px;
+    color:#2a3f17;
+    transition: color 0.5s;
+}
+.header:hover p{
+    color:white;
+}
+.content{
+    margin-top: 40px;
+    width:1000px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+}
+.mouse{
+    height:1000px;
+    width:700px;
+    background: url(./images/松鼠.png) no-repeat;
+    margin-right: 30px;
+}
+.text{
+    height:1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.text p{
+    color:#2a3f17;
+}
+.text1{
+    margin-top: 70px;
+    font-size: 36px;
+    transition: transform 0.5s;
+}
+.text1:hover{
+    transform: translateY(-30px);
+}
+.text2{
+    font-size: 24px;
+    width:500px;
+    transition: transform 0.5s ease-in-out;
+}
+.text2:hover{
+    transform: translateX(40px) scale(1.1,1.1);
+    font-size: 30px;
+}
+.text3{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.text3:hover{
+    transform: translateX(60px);
+}
+.box1{
+    width:50px;
+    height:50px;
+    border: #2a3f17 solid 2px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.box1 p{
+    font-size: 48px;    
+}
+.text4{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.text4:hover{
+    transform: translateX(60px);
+}
+.box2{
+    width:50px;
+    height:50px;
+    margin-right: 20px;
+    border: #2a3f17 solid 2px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2 p{
+    font-size: 48px;    
+}
+.text5{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.text5:hover{
+    transform: translateX(60px);
+}
+.box3{
+    width:50px;
+    height:50px;
+    margin-right: 20px;
+    border: #2a3f17 solid 2px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3 p{
+    font-size: 48px;    
+}
+.text6{
+    font-size: 24px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.text6:hover{
+    transform: translateX(60px);
+}
+.box4{
+    width:50px;
+    height:50px;
+    margin-right: 20px;
+    border: #2a3f17 solid 2px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box4 p{
+    font-size: 48px;    
+}
+.end{
+    height:400px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.final{
+    margin-right: 20px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.final p{
+    font-size: 40px;
+    color:#2a3f17;
+}
+.final1{
+    margin-bottom: 40px;
+}
+.finish{
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.finish p{
+    color:#2a3f17;
+}
+.finish1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.finish2{
+    font-size: 24px;
+}
+.finish3{   
+    font-size: 24px;
+}
+.button{
+    margin-left: 100px;
+    width:190px;
+    height:70px;
+    background-color: #949f8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50px);
+}
+.button p{
+    font-size: 36px;
+    color:white;
+    transition: color 0.5s ease-in-out;
+}
+.button:hover p{
+    color:#949f8b;
+}
