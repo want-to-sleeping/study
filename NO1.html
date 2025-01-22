@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="UTF-8">
+    <title>NO1</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="name">请输入一个字符串：</label><br><br>
+        <input type="password" id="name" name="name"><br><br>
+        <label for="pwd">请输入子串：</label><br><br>
+        <input type="password" id="pwd" name="pwd">
+        <input type="submit" value="提交" id="submit">
+        <script>
+            let submit=document.getElementById('submit');
+            submit.onclick=function(){
+            let num=0,i=0,zifu,zic,ges,ge,j=0,m,n=0;
+            zifu=document.getElementById('name').value;
+            zic=document.getElementById('pwd').value;
+            ges=zifu.length;
+            ge=zic.length;
+            document.write("zifu=",ges);
+            document.write("<br>zic=",ge);
+            for(i=0;i<ges;i++){
+                m=0;n=1;
+                for(j=0;j<ge;j++){
+                    m=j;
+                    if(zic[j]==zifu[i+m]){
+                        n++;
+                    }
+                    if(n==ge){
+                        num++;
+                    }
+                }
+            };
+                document.write("<br>共有"+num+"个子串");
+            }
+        </script>
+    </form>
+</body>
+</html>
