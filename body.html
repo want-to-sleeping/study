@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>spy practice</title>
+</head>
+<body>
+    <div id="time"></div>
+    <form  method="post">
+        <label for="number">账号：</label>
+        <input type="password" id="number" name="number"><br>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password"><br>
+        <button id="register">注册</button>
+        <button id="user">获取用户列表</button>
+    </form>
+    <div id="name"></div>
+    <script>
+        //获取当前时间并显示到页面上。
+        const time=new XMLHttpRequest();
+        time.open("GET","https://api.allorigins.win/raw?url=https://f.m.suning.com/api/ct.do");
+        time.setRequestHeader('Content-Type', 'application/json');
+        time.withCredentials = true;
+        time.onload = function() {  
+            if (time.readyState === 4 && time.status === 200) {
+                const data = JSON.parse(time.responseText);
+                const div=document.getElementById('time');
+                const wuyu=data.currentTime;
+                const date = new Date(wuyu);
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                const hours = String(date.getHours()).padStart(2, '0');
+                const minutes = String(date.getMinutes()).padStart(2, '0');
+                const seconds = String(date.getSeconds()).padStart(2, '0');
+                div.innerText= '当前时间：'+year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+        };
+        };
+        time.send();
+        const btn1=document.getElementById('register');
+        const ifm = new XMLHttpRequest();
+        const user={};
+        let i=0;
+        btn1.onclick = () => {
+ //输入账号密码，点击“注册”后，可将用户信息发送到后台，后台会将用户信息添加到用户列表中。
+        ifm.onload = function() {
+        if (ifm.readyState === 4 && ifm.status === 200) {
+            user[i]={
+                name:document.getElementById('number').value,
+                password:document.getElementById('password').value,
+            }
+            const data=JSON.parse(ifm.response);
+            console.log(data);
+            console.log(user[i]);
+            data.msg=user[i].name;
+        }      
+    };
+    };
+        ifm.open("POST","https://api.allorigins.win/raw?url=https://f.m.suning.com/api/ct.do");
+        ifm.setRequestHeader('Content-Type', 'application/json');
+        ifm.withCredentials = true;
+        ifm.send(JSON.stringify(user[i])); 
+        i++;
+        const btn2=document.getElementById('user');
+        const xhr = new XMLHttpRequest();
+        btn2.onclick = () => {
+ //点击“获取用户列表”按钮后，可以接收到所有已经注册的用户信息，并将所有的用户名展示到页面。
+        xhr.onload = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {            
+                const data = JSON.parse(xhr.responseText);
+                const ul=document.createElement("ul");
+                const buhui=document.getElementById('name');
+                buhui.appendChild(ul);
+                for(let x=0;x<=i;x++){
+                    ul.insertAdjacentHTML(                       
+                    "beforeend",
+                    `<li>${user[x].name}</li>`
+                    );
+                }
+                     console.log(data.response);               
+             }
+         };
+     };
+        xhr.open("GET","https://api.allorigins.win/raw?url=https://f.m.suning.com/api/ct.do");
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.withCredentials = true;
+        xhr.send();
+    </script>
+</body>
+</html>
